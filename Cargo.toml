@@ -11,25 +11,12 @@ homepage = "https://github.com/username/egui-chinese-font"
 readme = "README.md"
 keywords = ["egui", "chinese", "font", "gui", "cjk"]
 categories = ["gui", "internationalization", "text-processing"]
-rust-version = "1.70"
+rust-version = "1.85"
 exclude = ["target/", "examples/target/"]
 
 [dependencies]
-egui = "0.27"
+egui = "0.32"
 
 [dev-dependencies]
-eframe = "0.27"
+eframe = "0.32"
 
-# Optional platform-specific dependencies for advanced font discovery
-[target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["winuser", "wingdi", "fileapi", "handleapi", "processenv"], optional = true }
-
-[target.'cfg(target_os = "macos")'.dependencies]
-core-text = { version = "20.1.0", optional = true }
-
-[target.'cfg(target_os = "linux")'.dependencies]
-fontconfig = { version = "0.8", optional = true }
-
-[features]
-default = []
-platform-fonts = ["winapi", "core-text", "fontconfig"]

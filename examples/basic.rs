@@ -1,5 +1,5 @@
 //! Basic example showing Chinese font loading with egui-chinese-font.
-//! 
+//!
 //! This example demonstrates how to set up Chinese fonts for an egui application
 //! and displays various Chinese text samples.
 
@@ -21,8 +21,8 @@ fn main() -> Result<(), eframe::Error> {
             if let Err(e) = setup_chinese_fonts(&cc.egui_ctx) {
                 eprintln!("Failed to load Chinese fonts: {}", e);
             }
-            
-            Box::new(ChineseFontDemo::default())
+
+            Ok(Box::new(ChineseFontDemo::default()))
         }),
     )
 }
@@ -37,9 +37,9 @@ impl eframe::App for ChineseFontDemo {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("🇨🇳 Chinese Font Display Test");
             ui.label("egui-chinese-font 演示应用");
-            
+
             ui.separator();
-            
+
             ui.group(|ui| {
                 ui.heading("简体中文 (Simplified Chinese)");
                 ui.label("你好，世界！欢迎使用 egui-chinese-font。");
@@ -47,9 +47,9 @@ impl eframe::App for ChineseFontDemo {
                 ui.label("常用汉字：一二三四五六七八九十百千万");
                 ui.label("标点符号：，。；：？！\"\"''（）【】《》");
             });
-            
+
             ui.separator();
-            
+
             ui.group(|ui| {
                 ui.heading("繁體中文 (Traditional Chinese)");
                 ui.label("你好，世界！歡迎使用 egui-chinese-font。");
@@ -57,9 +57,9 @@ impl eframe::App for ChineseFontDemo {
                 ui.label("常用漢字：壹貳參肆伍陸柒捌玖拾佰仟萬");
                 ui.label("標點符號：，。；：？！\"\"''（）【】《》");
             });
-            
+
             ui.separator();
-            
+
             ui.group(|ui| {
                 ui.heading("Mixed Text - 混合文本");
                 ui.label("English + 中文 + Numbers: 2025年");
@@ -67,9 +67,9 @@ impl eframe::App for ChineseFontDemo {
                 ui.label("Math: 1 + 1 = 2 数学公式");
                 ui.label("Emoji: 🚀 火箭 🌟 星星 ❤️ 爱心");
             });
-            
+
             ui.separator();
-            
+
             ui.group(|ui| {
                 ui.heading("Interactive Text - 交互文本");
                 ui.label("Type some Chinese text:");
@@ -78,9 +78,9 @@ impl eframe::App for ChineseFontDemo {
                     ui.label(format!("You typed: {}", self.text_input));
                 }
             });
-            
+
             ui.separator();
-            
+
             ui.group(|ui| {
                 ui.heading("Font Information - 字体信息");
                 ui.label("This application uses egui-chinese-font to automatically");
