@@ -29,8 +29,8 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-egui-chinese-font = "0.1"
-egui = "0.27"
+egui-chinese-font = {git = "https://github.com/996666925/egui-chinese-font"}
+egui = "0.33"
 ```
 
 ### Basic Usage
