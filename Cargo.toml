@@ -1,22 +1,21 @@
 [package]
-name = "egui-chinese-font"
-version = "0.1.0"
-edition = "2021"
 authors = ["egui-chinese-font contributors <259901434@qq.com>"]
-description = "Cross-platform Chinese font loading for egui applications"
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/username/egui-chinese-font"
-documentation = "https://docs.rs/egui-chinese-font"
-homepage = "https://github.com/username/egui-chinese-font"
-readme = "README.md"
-keywords = ["egui", "chinese", "font", "gui", "cjk"]
 categories = ["gui", "internationalization", "text-processing"]
-rust-version = "1.85"
+description = "Cross-platform Chinese font loading for egui applications"
+documentation = "https://docs.rs/egui-chinese-font"
+edition = "2021"
 exclude = ["target/", "examples/target/"]
+homepage = "https://github.com/username/egui-chinese-font"
+keywords = ["egui", "chinese", "font", "gui", "cjk"]
+license = "MIT OR Apache-2.0"
+name = "egui-chinese-font"
+readme = "README.md"
+repository = "https://github.com/username/egui-chinese-font"
+rust-version = "1.88"
+version = "0.1.0"
 
 [dependencies]
-egui = "0.32"
+egui = "0.33"
 
 [dev-dependencies]
-eframe = "0.32"
-
+eframe = "0.33"
